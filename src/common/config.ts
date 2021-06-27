@@ -1,0 +1,10 @@
+import { config } from 'dotenv';
+import * as path from 'path';
+
+config({
+  path: path.join(__dirname, '../../.env'),
+});
+
+const { MONGO_LOGIN, MONGO_PASSWORD, MONGO_DB, PORT } = process.env;
+
+export const env = { MONGO_LOGIN, MONGO_PASSWORD, MONGO_DB, PORT };
